@@ -1,9 +1,9 @@
 var initialRecipes = [{
-  name: 'Quesadillsas',
-  ingredients: 'Tortillas, Cheese, Butter'
+  name: 'London Broil',
+  ingredients: '2 lbs London Broil Beef, 1/4 cup balsamic vinegar, 1/4 cup soy sauce, 2 tablepoons worcestershire sauce, 1/4 cup olive oil, 2 garlic cloves, 1 teaspon rosemary, 1/4 teaspon fresh bround black pepper'
 }, {
-  name: 'Hamburgers',
-  ingredients: 'Bun, Meat, Ketchup'
+  name: 'Cherry Tomato and Cucumber Salad',
+  ingredients: '2 English cucumbers, 12 ounces (about 2 cups) cherry tomatoes quartered, 1/4 large red onion thinly sliced, 2 tsp. rice vinegar, 2 tsp. balsamic vinegar, 2 tsp. freshly squeezed lemon juice, 2 tsp. olive oil, pinch of kosher salt, pinch of ground black pepper'
 }]
 
 if (!localStorage.recipes01) {
