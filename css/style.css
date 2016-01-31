@@ -17,6 +17,19 @@ input, textarea {
 
 .recipe-item {
   cursor: pointer;
+  margin-top: 1vh;
+}
+
+.list-group-item.ingredient-item {
+  background-color: transparent;
+}
+
+.list-group-item {
+  background-color: rgba(78,93,108,0.9)
+}
+
+.recipe-item h4 {
+  font-weight: bold;
 }
 
 body {

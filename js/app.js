@@ -75,9 +75,9 @@ var RecipeForm = React.createClass({
         <textarea className="form-control" onChange={this.handleIngredientsChange} placeholder="Ingredients separated by commas e.g. Tortillas, Steak, Avocado" value={this.state.ingredients}/>
         {this.props.recipeIndex !== undefined
           ?
-          <button className="btn btn-primary" onClick={this.handleSave} disabled={!this.state.name || !this.state.ingredients}>Save</button>
+          <button className="btn btn-success" onClick={this.handleSave} disabled={!this.state.name || !this.state.ingredients}>Save</button>
           :
-          <button className="btn btn-primary" onClick={this.addRecipe} disabled={!this.state.name || !this.state.ingredients}>Add</button>
+          <button className="btn btn-success" onClick={this.addRecipe} disabled={!this.state.name || !this.state.ingredients}>Add</button>
         }
         <div className="btn btn-danger" onClick={this.handleCancel}>Cancel</div>
       </form>
@@ -122,9 +122,9 @@ var RecipeList = React.createClass({
     var listItems = this.state.recipes.map((recipe, index) => {
       return (
         <div key={index}>
-          <li className="list-group-item recipe-item" onClick={this.setActiveItem.bind(null, index)}>{recipe.name}</li>
+          <li className="list-group-item recipe-item" onClick={this.setActiveItem.bind(null, index)}><h4>{recipe.name}</h4></li>
           {this.state.activeItem === index ?
-            <li className="list-group-item">
+            <li className="list-group-item recipe-detail">
               <RecipeDetail ingredients={recipe.ingredients} edit={this.edit.bind(null, index)} delete={this.delete.bind(null, index)}/>
             </li>:
             null}
@@ -135,7 +135,7 @@ var RecipeList = React.createClass({
     return (
       <div>
         <ul className="list-group">{listItems}</ul>
-        <div className="btn btn-primary" onClick={this.handleClick}>Add</div>
+        <div className="btn btn-success" onClick={this.handleClick}>Add</div>
       </div>
     )
   },
@@ -166,12 +166,12 @@ var RecipeDetail = React.createClass({
     var ingredientList = ingredients.map(function(ingredient, index){
       ingredient = ingredient.trim()
       return (
-        <li className="list-group-item" key={index}>{ingredient}</li>
+        <li className="list-group-item ingredient-item" key={index}>{ingredient}</li>
       )
     })
 
     return (
-        <div className="panel-body">
+        <div>
           <h4>Ingredients</h4>
           <ul className="list-group">{ingredientList}</ul>
           <div className="btn btn-warning" onClick={this.props.edit}>Edit</div>
