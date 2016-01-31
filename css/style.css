@@ -1,0 +1,28 @@
+.site-header {
+  text-align: center;
+  color: white;
+}
+
+#content {
+  margin-top: 3vh;
+}
+
+input, textarea {
+  margin-bottom: 1vh;
+}
+
+.btn {
+  margin-right: 1vh;
+}
+
+.recipe-item {
+  cursor: pointer;
+}
+
+body {
+  background:url(/img/bkgrnd.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
