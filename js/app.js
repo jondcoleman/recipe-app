@@ -144,7 +144,11 @@ var RecipeList = React.createClass({
     this.props.changeView('add')
   },
   setActiveItem: function(index){
-    this.setState({activeItem: index})
+    if (this.state.activeItem === index) {
+      this.setState({activeItem: undefined})
+    } else {
+      this.setState({activeItem: index})
+    }
   },
   edit: function(recipeIndex){
     this.props.changeView('edit', recipeIndex)
